@@ -16,6 +16,7 @@ export default class App extends Component {
     let ht = (this.state.heightmtr)
     let ht1 = ht/100
     let BMINumber = (this.state.weightmtr)/(ht1*ht1);
+    BMINumber = BMINumber.toFixed(2);
     this.setState({  
       bmimtr: BMINumber
     });
@@ -41,6 +42,7 @@ export default class App extends Component {
   }
   render(){return (
     <View style={styles.container}>
+    
     {/**to put both height and box in straight line */}
     <View style={styles.hview}>          
       <Text style = {styles.infotHeading}>Height</Text>
